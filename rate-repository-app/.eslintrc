@@ -10,6 +10,9 @@
   "parserOptions": {
     "requireConfigFile": false
   },
+  "env": {
+    "react-native/react-native": true
+  },
   "rules": {
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off"
