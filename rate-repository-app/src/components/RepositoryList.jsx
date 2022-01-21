@@ -1,6 +1,7 @@
 import { FlatList, View, StyleSheet } from 'react-native';
 import RepositoryItem from './RepositoryItem';
 import useRepositories from '../hooks/useRepositories';
+import Text from './Text';
 
 const styles = StyleSheet.create({
   separator: {
@@ -14,7 +15,7 @@ const RepositoryList = () => {
   const { repositories, loading } = useRepositories();
 
   if (loading) {
-    return <p>Loading...</p>
+    return <Text>Loading</Text>
   }
 
   // Get the nodes from the edges array
