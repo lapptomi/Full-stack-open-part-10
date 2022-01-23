@@ -30,8 +30,14 @@ const CardHeader = ({ data }) => {
         />
       </View>
       <View style={cardHeaderStyles.infoContainer}>
-        <Text fontWeight="bold" fontSize="subheading">{data.item.fullName}</Text>
-        <Text color="textSecondary">{data.item.description}</Text>
+        <Text
+          testID="fullName"
+          fontWeight="bold"
+          fontSize="subheading"
+        >
+          {data.item.fullName}
+        </Text>
+        <Text testID="description" color="textSecondary">{data.item.description}</Text>
       </View>
     </View>
   )

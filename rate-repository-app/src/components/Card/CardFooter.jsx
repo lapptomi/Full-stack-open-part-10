@@ -14,7 +14,7 @@ const CardFooter = ({ data }) => {
   return (
     <View style={cardFooterStyles.container}>
       <View>
-        <Text fontWeight="bold">
+        <Text testID="stargazersCount" fontWeight="bold">
           {data.item.stargazersCount > 1000 
             ? `${Math.round(data.item.stargazersCount / 100) / 10}k`
             : data.item.stargazersCount 
@@ -23,7 +23,7 @@ const CardFooter = ({ data }) => {
         <Text>Stars</Text>
       </View>
       <View>
-        <Text fontWeight="bold">
+        <Text testID="forksCount" fontWeight="bold">
           {data.item.forksCount > 1000 
             ? `${Math.round(data.item.forksCount / 100) / 10}k`
             : data.item.forksCount 
@@ -32,7 +32,7 @@ const CardFooter = ({ data }) => {
         <Text>Forks</Text>
       </View>
       <View>
-        <Text fontWeight="bold">
+        <Text testID="reviewCount" fontWeight="bold">
           {data.item.reviewCount > 1000 
             ? `${Math.round(data.item.reviewCount / 100) / 10}k`
             : data.item.reviewCount
@@ -41,7 +41,7 @@ const CardFooter = ({ data }) => {
         <Text>Reviews</Text>
       </View>
       <View>
-        <Text fontWeight="bold">
+        <Text testID="ratingAverage" fontWeight="bold">
           {data.item.ratingAverage > 1000 
             ? `${Math.round(data.item.ratingAverage / 100) / 10}k`
             : data.item.ratingAverage

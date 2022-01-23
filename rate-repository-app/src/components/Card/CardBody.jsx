@@ -15,7 +15,7 @@ const cardBodyStyles = StyleSheet.create({
 const CardBody = ({ data }) => {
   return (
     <View style={cardBodyStyles.container}>
-      <Text style={{ color: 'white' }}>
+      <Text testID="language" style={{ color: 'white' }}>
         {data.item.language}
       </Text>
     </View>
