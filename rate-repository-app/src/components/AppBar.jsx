@@ -51,9 +51,14 @@ const AppBar = () => {
                 Sign Out
               </Text>
             </>
-          : <Link to="/login">
-              <Text style={styles.tabItem}>Sign In</Text>
-            </Link>
+          : <>
+              <Link to="/login">
+                <Text style={styles.tabItem}>Sign In</Text>
+              </Link>
+              <Link to="/users/create">
+                <Text style={styles.tabItem}>Sign Up</Text>
+              </Link>
+            </>
         }
       </ScrollView>
     </View>

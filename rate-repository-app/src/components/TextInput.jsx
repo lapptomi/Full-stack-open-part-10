@@ -9,7 +9,6 @@ const TextInput = ({ style, error, ...props }) => {
 
   return (
     <NativeTextInput
-      multiline
       style={textInputStyle}
       secureTextEntry={props.password}
       {...props}

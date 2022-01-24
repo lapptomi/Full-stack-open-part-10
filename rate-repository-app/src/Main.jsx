@@ -6,6 +6,7 @@ import { Navigate, Route, Routes } from 'react-router';
 import SignIn from './components/SignIn';
 import SingleRepository from './components/RepositoryPage';
 import CreateReview from './components/CreateReview';
+import CreateUser from './components/CreateUser';
 
 const styles = StyleSheet.create({
   container: {
@@ -22,6 +23,7 @@ const Main = () => {
       <Routes>
         <Route path="/repository/:repositoryId" element={<SingleRepository />} exact />
         <Route path="/reviews/create" element={<CreateReview />} exact />
+        <Route path="/users/create" element={<CreateUser />} exact />
         <Route path="/login" element={<SignIn />} exact />
         <Route path="/" element={<RepositoryList />} exact />
         <Route path="*" element={<Navigate to="/" replace />} />
