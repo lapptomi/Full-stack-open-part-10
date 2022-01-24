@@ -33,6 +33,20 @@ export const FIND_REPOSITORY = gql`
       ratingAverage
       fullName
       url
+      reviews {
+        edges {
+          node {
+            id
+            text
+            rating
+            createdAt
+            user {
+              id
+              username
+            }
+          }
+        }
+      }
     }
   }
 `;
