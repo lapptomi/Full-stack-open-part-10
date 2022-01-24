@@ -6,6 +6,7 @@ import { useContext } from 'react';
 import AuthStorageContext from '../contexts/AuthStorageContext';
 import { useApolloClient, useQuery } from '@apollo/client';
 import { ME } from '../graphql/queries';
+import { useNavigate } from 'react-router-native';
 
 const styles = StyleSheet.create({
   container: {
@@ -27,10 +28,12 @@ const AppBar = () => {
   const authStorage = useContext(AuthStorageContext);
   const apolloClient = useApolloClient();
   const { loading, data } = useQuery(ME);
+  const navigate = useNavigate();
 
   const signOut = () => {
     apolloClient.resetStore();
     authStorage.removeAccessToken();
+    navigate('/');
   };
 
   return (
@@ -40,9 +43,14 @@ const AppBar = () => {
           <Text style={styles.tabItem}>Repositories</Text>
         </Link>
         {!loading && data.me !== null
-          ? <Text onClick={() => signOut()} style={styles.tabItem}>
-              Sign Out
-            </Text>
+          ? <>
+              <Link to="/reviews/create">
+                <Text style={styles.tabItem}>Create a review</Text>
+              </Link>
+              <Text onClick={() => signOut()} style={styles.tabItem}>
+                Sign Out
+              </Text>
+            </>
           : <Link to="/login">
               <Text style={styles.tabItem}>Sign In</Text>
             </Link>
