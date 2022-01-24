@@ -27,7 +27,6 @@ const validationSchema = Yup.object().shape({
     .required('Rating is required'),
   review: Yup
     .string()
-    .required('Password is required')
 });
 
 const CreateReview = () => {
