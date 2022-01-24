@@ -55,11 +55,9 @@ describe('RepositoryList', () => {
       };
 
       // Add your test code here
-      const { debug, getAllByTestId } = render(
+      const { getAllByTestId } = render(
         <RepositoryListContainer repositories={repositories} />
       );
-
-      debug();
       
       for (let i = 0; i < repositories.edges.length; i++) {
         const roundNumber = (value) => value > 1000 

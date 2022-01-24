@@ -1,4 +1,5 @@
 import { View, StyleSheet } from 'react-native';
+import { Link } from 'react-router-native';
 import CardBody from './Card/CardBody';
 import CardFooter from './Card/CardFooter';
 import CardHeader from './Card/CardHeader';
@@ -13,11 +14,13 @@ const cardStyles = StyleSheet.create({
 
 const RepositoryItem = ({ data }) => {
   return (
-    <View style={cardStyles.container}>
-      <CardHeader data={data} />
-      <CardBody data={data} />
-      <CardFooter data={data} />
-    </View>
+    <Link to={`/repository/${data.item.id}`}>
+      <View style={cardStyles.container}>
+        <CardHeader data={data} />
+        <CardBody data={data} />
+        <CardFooter data={data} />
+      </View>
+    </Link>
   );
 };
 
