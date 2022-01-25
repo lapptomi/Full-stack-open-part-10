@@ -30,9 +30,9 @@ const ReviewItem = (props) => {
   return (
     <View style={styles.reviewContainer}>
       <View style={styles.headerContainer}>
-        <View style={styles.ratingContainer}>
+        <Text style={styles.ratingContainer}>
           {review.rating}
-        </View>
+        </Text>
         <View style={styles.infoContainer}>
           <Text fontWeight="bold" fontSize="subheading">
             {repositoryId ? review.user.username : review.repository.fullName}

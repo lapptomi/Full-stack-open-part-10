@@ -16,7 +16,6 @@ const styles = StyleSheet.create({
   }
 });
 
-
 const SignInForm = ({ onSubmit }) => {
   return (
     <View style={styles.container}>

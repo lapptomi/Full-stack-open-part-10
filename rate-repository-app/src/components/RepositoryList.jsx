@@ -12,8 +12,8 @@ const styles = StyleSheet.create({
     height: 10,
   },
   menuContainer: {
-    flexDirection: 'col',
-    justifyContent: 'left',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
   },
 });
 
@@ -41,13 +41,13 @@ export class RepositoryListContainer extends React.Component {
 
     return (
       <View testID='repositoryItem'>
-      <FlatList
-        data={repositoryNodes}
-        ItemSeparatorComponent={ItemSeparator}
-        renderItem={(repository) => <RepositoryItem data={repository} />}
-        ListHeaderComponent={this.renderHeader}
-      />
-    </View>
+        <FlatList
+          data={repositoryNodes}
+          ItemSeparatorComponent={ItemSeparator}
+          renderItem={(repository) => <RepositoryItem data={repository} />}
+          ListHeaderComponent={this.renderHeader}
+        />
+      </View>
     );
   }
 }
