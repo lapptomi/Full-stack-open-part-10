@@ -47,6 +47,9 @@ const AppBar = () => {
               <Link to="/reviews/create">
                 <Text style={styles.tabItem}>Create a review</Text>
               </Link>
+              <Link to="/reviews">
+                <Text style={styles.tabItem}>My reviews</Text>
+              </Link>
               <Text onClick={() => signOut()} style={styles.tabItem}>
                 Sign Out
               </Text>
